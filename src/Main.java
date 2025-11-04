@@ -10,25 +10,21 @@ public class Main {
         int[] inputArray1 = {1093, 5000, 2075, 6893, 1500};
         float[] outputArray1 = new float[4];
         float sum = 0f;
+        int max = -1;
+        int min = 1000000;
         for (int element : inputArray1) {
             sum += element;
-        }
-        outputArray1[0] = sum;
-        outputArray1[3] = sum / inputArray1.length;
-        int max = -1;
-        for (int element : inputArray1) {
             if (element > max) {
                 max = element;
             }
-        }
-        outputArray1[1] = max;
-        int min = 1000000;
-        for (int element : inputArray1) {
             if (element < min) {
                 min = element;
             }
         }
+        outputArray1[0] = sum;
+        outputArray1[1] = max;
         outputArray1[2] = min;
+        outputArray1[3] = sum / inputArray1.length;
         System.out.println(Arrays.toString(inputArray1));
         System.out.println(Arrays.toString(outputArray1));
 
